@@ -1,15 +1,44 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
+
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <link rel="stylesheet" href="style.css">
   <title>Frontend Mentor | Age calculator app</title>
 </head>
+
 <body>
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="https://github.com/whitwander">Victor Mikhael</a>.
-  </div>
+  <main>
+    <section class="inputs-all">
+      <div class="inputs">
+        <h3 class="titulo">DAY</h3>
+        <input maxlength="2" class="places" id="day" type="number" placeholder="DD">
+      </div>
+      <div class="inputs">
+        <h3 class="titulo">MONTH</h3>
+        <input maxlength="2" class="places" id="month" type="number" placeholder="MM">
+      </div>
+      <div class="inputs">
+        <h3 class="titulo">YEAR</h3>
+        <input maxlength="4" class="places" id="year" type="number" placeholder="YYYY">
+      </div>
+    </section>
+    <button type="submit"><img class="image" src="assets/images/icon-arrow.svg" alt="arrow icon"></button>
+    <div class="results">
+      <p><span id="year-res" class="results-text">--</span> Years</p>
+      <p><span id="month-res" class="results-text">--</span> Months</p>
+      <p><span id="day-res" class="results-text">--</span> Days</p>
+    </div>
+  </main>
+
+  <footer class="footer">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"> Frontend Mentor.</a>
+    Coded by <a href="https://github.com/whitwander"> Victor Mikhael.</a>
+  </footer>
+  
+  <script src="main.js"></script>
 </body>
+
 </html>
