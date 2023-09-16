@@ -1,14 +1,14 @@
 const day = document.getElementById('day')
 const month = document.getElementById('month')
 const year = document.getElementById('year')
-const button = document.querySelector('button')
+const image = document.querySelector('.image')
 const results = document.querySelectorAll('.results-text')
 const dayres = document.getElementById('day-res')
 const monthres = document.getElementById('month-res')
 const yearres = document.getElementById('year-res')
 
 
-button.addEventListener('click', verificaInput)
+image.addEventListener('click', verificaInput)
 
 day.addEventListener('input', () => {
     let max = 2
@@ -36,7 +36,7 @@ function verificaInput() {
     let valorMes = month.value
     let valorAno = year.value
 
-    if(valorDia === '' && valorMes === '' && valorAno === '') {
+    if(valorDia === '' || valorMes === '' || valorAno === '') {
         console.log('erro')
     } else if(valorDia > 31 || valorMes > 12 || valorAno > 2023) {
         console.log('ainda erro')
@@ -51,16 +51,10 @@ function calculaInputs() {
     let mes = dataAtual.getMonth() +1
     let ano = dataAtual.getFullYear()
 
-    console.log(dia)
-    console.log(mes)
-    console.log(ano)
-
     let anoFinal = ano - year.value
     let mesFinal = Math.abs(mes - parseInt(month.value))
     let diaFinal = 30 - parseInt(day.value) + dia
     
-    
-
     results.forEach(input => {
         input.innerHTML = ''
         dayres.innerHTML = diaFinal
