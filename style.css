@@ -50,6 +50,7 @@ main {
     background-color: hsl(259, 100%, 65%);
     border-radius: 50px;
     padding: 1.5em;
+    cursor: pointer;
 }
 
 .results {
