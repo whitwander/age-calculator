@@ -51,12 +51,16 @@ function calculaInputs() {
     let mes = dataAtual.getMonth() +1
     let ano = dataAtual.getFullYear()
 
-    let diaFinal = dia - day.value
-    let mesFinal = parseInt(month.value + mes)
-    let anoFinal = ano - year.value
-
+    console.log(dia)
     console.log(mes)
+    console.log(ano)
+
+    let anoFinal = ano - year.value
+    let mesFinal = Math.abs(mes - parseInt(month.value))
+    let diaFinal = 30 - parseInt(day.value) + dia
     
+    
+
     results.forEach(input => {
         input.innerHTML = ''
         dayres.innerHTML = diaFinal
